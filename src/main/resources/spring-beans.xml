@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!--  
+	Pour déployer un webservice, on peut créer un objet qui s'appelle simple jaxws exporter
+	Autrement dit, on demande à Spring au démarrage de créer un bean avec la classe comme présentée ci-dessous" 
+	 --> 
+	
+	<bean class="org.springframework.remoting.jaxws.SimpleJaxWsServiceExporter">
+		<property name="baseAddress" value="http://localhost:8088/Banque"></property>
+	</bean>
+</beans>
